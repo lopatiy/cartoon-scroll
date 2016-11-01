@@ -2,7 +2,7 @@ var screens =
     [
         {
             anchor: "Main",
-            content: '<a id="copy-a" href="#">Copy</a>'
+            content: '<ahref="#">Copy</a>'
         },
 
         {
@@ -54,6 +54,7 @@ $(document).ready(function () {
             }
 
             this.scale();
+            this.bindEvents();
             return this;
         },
         wheelerScroll: function (direction) {
@@ -64,6 +65,10 @@ $(document).ready(function () {
             return this;
         },
         scrollToIndex: function (index) {
+            if(index < 0 || index > screens.length-1){
+                return;
+            }
+
             if (!this.inAction) {
                 this.setCurrent(index);
 
@@ -142,6 +147,13 @@ $(document).ready(function () {
 
             anchorHandler.wheelerScroll(0);
             return this;
+        },
+        bindEvents: function () {
+            var self = this;
+            document.body.addEventListener('wheel', function (evnt) {
+                self.scrollToIndex(self.currentIndex + (evnt.wheelDelta < 0 ? 1 : -1));
+                return false;
+            })
         }
     };
     anchorHandler.init(screens);

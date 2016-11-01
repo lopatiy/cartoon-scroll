@@ -6,7 +6,7 @@ html , body {
 }
 
 body{
-    background: url('img/landscapetest.jpg') repeat-x, linear-gradient(to bottom, #BBEDF8 0%, #BBEDF8 50%,#AEDF2C 50%,#AEDF2C 100%);
+    background: url('img/landscape.jpg') repeat-x, linear-gradient(to bottom, #BBEDF8 0%, #BBEDF8 50%,#AEDF2C 50%,#AEDF2C 100%);
     background-size: 40%, 100%;
     background-position: 0 50%, top left;
     background-attachment: fixed, fixed;
@@ -19,10 +19,42 @@ div {
 }
 
 .screen {
-    margin: 50 100 100 100;
+    position: relative;
+    margin: 50px 100px 100px 100px;
     background-color: #fff;
     height: calc(100% - 100px);
     box-sizing: border-box;
+}
+
+.screen:before ,
+.screen:after {
+    content: '';
+    width: 20px;
+    background-image: url('img/scroll/rope.png');
+    background-size: contain;
+    background-position: 0 0;
+    height: calc(100% + 100px);
+    top: -50px;
+    position: relative;
+    display: block;
+}
+
+.screen:before {
+    left: 20px;
+    float: left;
+}
+
+.screen:after {
+    right: 20px;
+    float: right;
+}
+
+.screen .screen-content{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: white;
+    z-index: 1;
 }
 
 div[class*=anchor-] {

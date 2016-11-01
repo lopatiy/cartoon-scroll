@@ -49,7 +49,7 @@ $(document).ready(function () {
             this.screens = $.extend(true, {}, screens);
 
             for (var i = 0; i < screens.length; i++) {
-                this.container.append('<div id="' + screens[i].anchor + '" class="screen">' + screens[i].content + "</div>", {});
+                this.container.append('<div id="' + screens[i].anchor + '" class="screen"><div class="screen-content">' + screens[i].content + "</div> </div>", {});
                 this.scrollBar.append('<div class="anchor-' + i + '" data-index="' + i + '">' + screens[i].anchor + "</div>", {})
             }
 

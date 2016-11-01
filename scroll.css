@@ -1,0 +1,195 @@
+html , body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body{
+    background: url('img/landscapetest.jpg') repeat-x, linear-gradient(to bottom, #BBEDF8 0%, #BBEDF8 50%,#AEDF2C 50%,#AEDF2C 100%);
+    background-size: 40%, 100%;
+    background-position: 0 50%, top left;
+    background-attachment: fixed, fixed;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.screen {
+    margin: 50 100 100 100;
+    background-color: #fff;
+    height: calc(100% - 100px);
+    box-sizing: border-box;
+}
+
+div[class*=anchor-] {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+    user-select: none;  
+    cursor: pointer;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.wrapper {
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    background-image: url('img/textures/marble-top.png'),url('img/textures/marble-top.png'), url('img/textures/marble-body.png'), url('img/textures/marble-body.png');
+    background-repeat: no-repeat,no-repeat, repeat-y,repeat-y;
+    background-size: 50px,50px, 50px, 50px;
+    background-position: left top,right top, left top, right top;
+    display: inline-block;
+    overflow: hidden;
+    width: 700px;
+    height: 100%;
+    position: relative;
+
+}
+
+.scroll {
+    display: inline-block;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.scroll-bar {
+    position: relative;
+    float: left;
+    display: block;
+    height: 100%;
+    width: 20px;
+    background-image: url('img/scroll/rope.png');
+    background-size: contain;
+    background-position: 0 0;
+}
+
+.rope-part {
+    float: left;
+    display: block;
+    height: 30px;
+    width: 20px;
+    background-image: url('img/scroll/rope.png');
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-position: 0 0px;
+}
+
+.wheel {
+    cursor: pointer;
+    background-size: contain;
+    position: relative;
+    width: 53px;
+    height: 60px;
+    transform: rotate(0deg);
+}
+
+.wheel-spinner {
+    background: url('img/scroll/bot-2.png') no-repeat 0 0;
+    background-size: contain;
+    height: 43px;
+    width: 43px;
+    position: relative;
+}
+
+.wheel-button {
+    position: absolute;
+    width: 20px;
+    height: 13px;
+}
+
+#wheel-top {
+    background: url('img/scroll/top-3.png') no-repeat 0 0;
+    background-size: contain;
+    top: 0;
+}
+
+#wheel-bot{
+    background: url('img/scroll/bot-3.png') no-repeat 0 0;
+    background-size: contain;
+    bottom: 0;
+}
+
+#wheel-top .wheel-spinner {
+    top: 12px;
+}
+
+#wheel-bot .wheel-spinner {
+    top: 3px;
+    left: 1px;
+}
+
+#wheel-top .wheel-button {
+    background: url('img/scroll/top-1.png') no-repeat 0 0;
+    background-size: contain;
+    top: 25px;
+    left: 16px;
+}
+
+#wheel-bot .wheel-button {
+    background: url('img/scroll/bot-1.png') no-repeat 0 0;
+    background-size: contain;
+    top: 19px;
+    left: 16px;
+}
+
+.scroll-caret{
+    top: 0;
+    position: relative;
+    display: block;
+    width: 30px;
+    margin-left: -5px;
+}
+
+.scroll-caret:before{
+    display: block;
+    content: "";
+    height: 20px;
+    width: 23px;
+    margin-left: 4px;
+    position: absolute;
+    top: 0;
+    background-image: url('img/scroll/rock.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+}
+
+.scroll-caret:after{
+    display: block;
+    content: "";
+    height: 20px;
+    margin-top: -20px;
+    width: 23px;
+    margin-left: 4px;
+    position: absolute;
+    top: 100%;
+    background-image: url('img/scroll/rock.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+}
+
+.arrow {
+    display: block;
+    content: "";
+    height: 20px;
+    width: 50px;
+    position: absolute;
+    top: 100%;
+    background-image: url('img/scroll/arrow.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+}

@@ -145,15 +145,4 @@ $(document).ready(function () {
         }
     };
     anchorHandler.init(screens);
-
-    $('.anchor-0').on({
-        'click': function () {
-            document.execCommand('copy')
-        },
-        'copy': function (e) {
-            console.log(e)
-            e.originalEvent.clipboardData.setData("text/plain", "IT WORKS!")
-            e.preventDefault()
-        }
-    })
 });
